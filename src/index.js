@@ -1,4 +1,4 @@
-import { Ship } from './code/ship.js';
+import { Ship } from './code/ship';
 import { createBoard as createBoard } from './code/board.js';
 
 const ship1 = new Ship(4);
@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', function () {
     createBoard();
 });
 
-const element = document.getElementById('app');
-element.textContent = 'Hello, Webpack!';
+
+

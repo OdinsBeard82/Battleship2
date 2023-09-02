@@ -1,3 +1,5 @@
+const element = document.getElementById('board');
+
 export function createBoard() {
     const board = document.getElementById('board');
 

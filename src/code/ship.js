@@ -18,14 +18,5 @@ class Ship {
       return this.sunk;
     }
   }
-  
 
-  const ship1 = new Ship(4);
-  const ship2 = new Ship(3);
-  
-  console.log(ship1);
-  console.log(ship2);
-  
-  ship1.hit();
-  console.log("Is ship1 sunk?", ship1.isSunk());
-  
+  export default Ship;
