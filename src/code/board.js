@@ -1,5 +1,3 @@
-const element = document.getElementById('board');
-
 export function createBoard() {
     const board = document.getElementById('board');
 
@@ -8,11 +6,8 @@ export function createBoard() {
             const battleshipSquare = document.createElement('div');
             battleshipSquare.className = 'battleship-square';
 
-            if ((x + y) % 2 === 0) {
-                battleshipSquare.style.backgroundColor = 'fffff';
-            }
-
             board.appendChild(battleshipSquare);
         }
     }
 }
+

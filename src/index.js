@@ -1,12 +1,10 @@
 
-import { createBoard as createBoard } from './code/board.js';
+import { createBoard } from './code/board.js';
 
 
+createBoard();
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    createBoard();
-});
 
 
 
