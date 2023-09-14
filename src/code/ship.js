@@ -19,4 +19,13 @@ class Ship {
     }
   }
 
-  export default Ship;
+  function addShip() {
+    const shipImg = document.createElement('img');
+    shipImg.src = 'shipImg.png';
+    shipImg.className = 'ship-square';
+  
+  }
+  
+
+ 
+  export default addShip;
