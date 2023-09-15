@@ -9,5 +9,9 @@ export function createBoard() {
             board.appendChild(battleshipSquare);
         }
     }
+
+
 }
+
+
 

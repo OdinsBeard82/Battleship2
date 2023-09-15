@@ -16,7 +16,17 @@
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createBoard: () => (/* binding */ createBoard)\n/* harmony export */ });\nfunction createBoard() {\n    const board = document.getElementById('board');\n\n    for (let x = 0; x < 10; x++) {\n        for (let y = 0; y < 10; y++) {\n            const battleshipSquare = document.createElement('div');\n            battleshipSquare.className = 'battleship-square';\n\n            board.appendChild(battleshipSquare);\n        }\n    }\n}\n\n\n\n//# sourceURL=webpack://battleship2/./src/code/board.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createBoard: () => (/* binding */ createBoard)\n/* harmony export */ });\nfunction createBoard() {\n    const board = document.getElementById('board');\n\n    for (let x = 0; x < 10; x++) {\n        for (let y = 0; y < 10; y++) {\n            const battleshipSquare = document.createElement('div');\n            battleshipSquare.className = 'battleship-square';\n\n            board.appendChild(battleshipSquare);\n        }\n    }\n\n\n}\n\n\n\n\n\n//# sourceURL=webpack://battleship2/./src/code/board.js?");
+
+/***/ }),
+
+/***/ "./src/code/shipLocation.js":
+/*!**********************************!*\
+  !*** ./src/code/shipLocation.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   shipLocation: () => (/* binding */ shipLocation)\n/* harmony export */ });\nfunction shipLocation() {\n\n\n    let shipPosition = new Node(3);\n    \n    const shipImg = document.createElement('img');\n    shipImg.src = '../Images/ship.jpg';\n    shipImg.className = 'ship-square';\n    board.children[shipPosition.row][shipPosition.col].appendChild(shipImg);\n  \n    \n}\n\n//# sourceURL=webpack://battleship2/./src/code/shipLocation.js?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _code_board_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./code/board.js */ \"./src/code/board.js\");\n\n\n\n\n(0,_code_board_js__WEBPACK_IMPORTED_MODULE_0__.createBoard)();\n\n\n\n\n\n\n\n//# sourceURL=webpack://battleship2/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _code_board_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./code/board.js */ \"./src/code/board.js\");\n/* harmony import */ var _code_shipLocation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./code/shipLocation.js */ \"./src/code/shipLocation.js\");\n\n\n\n\n\n\n\n(0,_code_board_js__WEBPACK_IMPORTED_MODULE_0__.createBoard)();\n(0,_code_shipLocation_js__WEBPACK_IMPORTED_MODULE_1__.shipLocation)();\n\n\n\n\n\n\n\n//# sourceURL=webpack://battleship2/./src/index.js?");
 
 /***/ })
 

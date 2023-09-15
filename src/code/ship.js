@@ -4,6 +4,7 @@ class Ship {
       this.hits = 0;
       this.sunk = false;
     }
+
   
     hit() {
       if (!this.isSunk()) {
@@ -18,14 +19,6 @@ class Ship {
       return this.sunk;
     }
   }
-
-  function addShip() {
-    const shipImg = document.createElement('img');
-    shipImg.src = 'shipImg.png';
-    shipImg.className = 'ship-square';
-  
-  }
-  
-
  
-  export default addShip;
+  export default Ship;
+

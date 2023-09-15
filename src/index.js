@@ -1,10 +1,12 @@
-import { addShip } from './code/ship.js';
-import { createBoard } from './code/board.js';
+import { createBoard, addShip } from './code/board.js';
+import { shipLocation } from './code/shipLocation.js';
+
+
 
 
 
 createBoard();
-addShip();
+shipLocation();
 
 
 
