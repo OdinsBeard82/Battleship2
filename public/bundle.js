@@ -20,13 +20,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/code/ship.js":
+/*!**************************!*\
+  !*** ./src/code/ship.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Ship {\n    constructor(length) {\n      this.length = length;\n      this.hits = 0;\n      this.sunk = false;\n    }\n\n  \n    hit() {\n      if (!this.isSunk()) {\n        this.hits++;\n        if (this.hits === this.length) {\n          this.sunk = true;\n        }\n      }\n    }\n  \n    isSunk() {\n      return this.sunk;\n    }\n  }\n \n  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Ship);\n\n\n\n//# sourceURL=webpack://battleship2/./src/code/ship.js?");
+
+/***/ }),
+
 /***/ "./src/code/shipLocation.js":
 /*!**********************************!*\
   !*** ./src/code/shipLocation.js ***!
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   shipLocation: () => (/* binding */ shipLocation)\n/* harmony export */ });\nfunction shipLocation() {\n\n\n    let shipPosition = new Node(3);\n    \n    const shipImg = document.createElement('img');\n    shipImg.src = '../Images/ship.jpg';\n    shipImg.className = 'ship-square';\n    board.children[shipPosition.row][shipPosition.col].appendChild(shipImg);\n  \n    \n}\n\n//# sourceURL=webpack://battleship2/./src/code/shipLocation.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   shipLocation: () => (/* binding */ shipLocation)\n/* harmony export */ });\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module 'react'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\n\nfunction shipLocation() {\n\n\n    let shipPosition = new Node(3);\n    \n    const shipImg = document.createElement('img');\n    shipImg.src = '../Images/ship.jpg';\n    shipImg.className = 'ship-square';\n    board.children[shipPosition.row][shipPosition.col].appendChild(shipImg);\n  \n    \n}\n\n//# sourceURL=webpack://battleship2/./src/code/shipLocation.js?");
 
 /***/ }),
 
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _code_board_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./code/board.js */ \"./src/code/board.js\");\n/* harmony import */ var _code_shipLocation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./code/shipLocation.js */ \"./src/code/shipLocation.js\");\n\n\n\n\n\n\n\n(0,_code_board_js__WEBPACK_IMPORTED_MODULE_0__.createBoard)();\n(0,_code_shipLocation_js__WEBPACK_IMPORTED_MODULE_1__.shipLocation)();\n\n\n\n\n\n\n\n//# sourceURL=webpack://battleship2/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _code_board_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./code/board.js */ \"./src/code/board.js\");\n/* harmony import */ var _code_shipLocation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./code/shipLocation.js */ \"./src/code/shipLocation.js\");\n/* harmony import */ var _code_ship_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code/ship.js */ \"./src/code/ship.js\");\n\n\n\n\n\n\n\n\n(0,_code_board_js__WEBPACK_IMPORTED_MODULE_0__.createBoard)();\n(0,_code_shipLocation_js__WEBPACK_IMPORTED_MODULE_1__.shipLocation)();\n(0,_code_ship_js__WEBPACK_IMPORTED_MODULE_2__.Ship)();\n\n\n\n\n\n\n\n//# sourceURL=webpack://battleship2/./src/index.js?");
 
 /***/ })
 

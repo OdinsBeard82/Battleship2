@@ -1,5 +1,6 @@
 import { createBoard, addShip } from './code/board.js';
 import { shipLocation } from './code/shipLocation.js';
+import { Ship } from './code/ship.js';
 
 
 
@@ -7,6 +8,7 @@ import { shipLocation } from './code/shipLocation.js';
 
 createBoard();
 shipLocation();
+Ship();
 
 
 
