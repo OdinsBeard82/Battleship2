@@ -7,7 +7,7 @@
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
     "test": "jest",
-    "watch": "jest --watch"
+    "watch": "jest --watchAll"
   },
   "keywords": [],
   "author": "Your Name",
