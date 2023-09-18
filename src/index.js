@@ -1,3 +1,5 @@
+import { createBoard } from './code/board';
+
 class Ship {
     constructor(length) {
         this.length = length;
@@ -19,22 +21,8 @@ class Ship {
     }
 }
 
-function createBoard() {
-    const board = document.getElementById('board');
-
-    for (let x = 0; x < 10; x++) {
-        for (let y = 0; y < 10; y++) {
-            const battleshipSquare = document.createElement('div');
-            battleshipSquare.className = 'battleship-square';
-
-            board.appendChild(battleshipSquare);
-        }
-    }
-
-    return board;
-}
-
 const board = createBoard();
+
 
 function addShip(board, row, col) {
     const shipImg = document.createElement('img');
@@ -45,8 +33,16 @@ function addShip(board, row, col) {
 }
 
 const shipPosition = { row: 0, col: 1 };
-addShip(board, shipPosition.row, shipPosition.col);
+const shipPosition2 = { row: 0, col: 2 };
+const shipPosition3 = { row: 0, col: 3 };
+const shipPosition4 = { row: 0, col: 4 };
+const shipPosition5 = { row: 1, col: 4 };
 
+addShip(board, shipPosition.row, shipPosition.col);
+addShip(board, shipPosition2.row, shipPosition2.col);
+addShip(board, shipPosition3.row, shipPosition3.col);
+addShip(board, shipPosition4.row, shipPosition4.col);
+addShip(board, shipPosition5.row, shipPosition5.col);
 
   
 
