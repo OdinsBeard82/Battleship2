@@ -1,10 +1,13 @@
 import { createBoard } from './code/board';
+import { shipPositions } from './code/shipPosition';
+
 
 class Ship {
     constructor(length) {
         this.length = length;
         this.hits = 0;
         this.sunk = false;
+   
     }
 
     hit() {
@@ -32,22 +35,11 @@ function addShip(board, row, col) {
     board.children[squareIndex].appendChild(shipImg);
 }
 
-const shipPosition = { row: 0, col: 1 };
-const shipPosition2 = { row: 0, col: 2 };
-const shipPosition3 = { row: 0, col: 3 };
-const shipPosition4 = { row: 0, col: 4 };
-const shipPosition5 = { row: 1, col: 4 };
 
-addShip(board, shipPosition.row, shipPosition.col);
-addShip(board, shipPosition2.row, shipPosition2.col);
-addShip(board, shipPosition3.row, shipPosition3.col);
-addShip(board, shipPosition4.row, shipPosition4.col);
-addShip(board, shipPosition5.row, shipPosition5.col);
+  let row = Math.floor(Math.random()*10)+1;
+  let col = Math.floor(Math.random()*10)+1;
 
+
+  const shipPosition = { row, col};
   
-
-
-
-
-
-
+  addShip(board, shipPosition.row, shipPosition.col);
