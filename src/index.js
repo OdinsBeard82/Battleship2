@@ -1,5 +1,5 @@
 import { createBoard } from './code/board';
-import { shipPositions } from './code/shipPosition';
+import { addShip, numbShips } from './code/ship';
 
 
 class Ship {
@@ -26,20 +26,12 @@ class Ship {
 
 const board = createBoard();
 
-
-function addShip(board, row, col) {
-    const shipImg = document.createElement('img');
-    shipImg.src = '../src/images/ship.jpg';
-    shipImg.className = 'ship-square';
-    const squareIndex = row * 10 + col; 
-    board.children[squareIndex].appendChild(shipImg);
-}
-
-
-  let row = Math.floor(Math.random()*10)+1;
-  let col = Math.floor(Math.random()*10)+1;
-
-
-  const shipPosition = { row, col};
-  
-  addShip(board, shipPosition.row, shipPosition.col);
+for (let i = 0; i < numbShips; i++) {
+    let min = 0;
+    let max = 9;
+    let row = Math.floor(Math.random()*(max-min)+min);
+    let col = Math.floor(Math.random()*(max-min)+min);
+    
+    
+    addShip(board, row, col);
+    }
