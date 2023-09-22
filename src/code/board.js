@@ -5,7 +5,6 @@ export function createBoard() {
         for (let y = 0; y < 10; y++) {
             const battleshipSquare = document.createElement('div');
             battleshipSquare.className = 'battleship-square';
-
             board.appendChild(battleshipSquare);
         }
     }

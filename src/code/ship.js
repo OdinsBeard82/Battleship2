@@ -1,10 +1,25 @@
-export function addShip(board, row, col) {
-  const shipImg = document.createElement('img');
-  shipImg.src = '../src/images/ship.jpg';
-  shipImg.className = 'ship-square1';
-  const squareIndex = row * 10 + col; 
-  board.children[squareIndex].appendChild(shipImg);
+import { ship } from './addShip';
+
+export class ship {
+  constructor(length) {
+      this.length = length;
+      this.hits = 0;
+      this.sunk = false;
+ 
+  }
+
+  hit() {
+      if (!this.isSunk()) {
+          this.hits++;
+          if (this.hits === this.length) {
+              this.sunk = true;
+          }
+      }
+  }
+
+  isSunk() {
+      return this.sunk;
+  }
 }
 
-export const numbShips = 5;
-
+export default hit();

@@ -1,15 +1,27 @@
 .board {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-
 }
 
-.battleship-square {
+.battleship-button {
   width: 50px;
   height: 50px;
   border: 1px solid #999;
+  border-radius: 10px;
+  border-color: blue;
+  border-width: 2px;
 }
 
+.playbutton {
+ 
+  color: rgb(19, 16, 16);
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+
+}
