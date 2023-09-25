@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createButtons: () => (/* binding */ createButtons)\n/* harmony export */ });\nfunction createButtons() {\n    const board = document.getElementById('board');\n\n    for (let x = 0; x < 10; x++) {\n        for (let y = 0; y < 10; y++) {\n            const battleshipButtons = document.createElement('button');\n            battleshipButtons.className = 'battleship-button';\n            board.appendChild(battleshipButtons);\n        }\n    }\n\n    return board;\n}\n\n//# sourceURL=webpack://battleship2/./src/code/boardButtons.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createButtons: () => (/* binding */ createButtons)\n/* harmony export */ });\n\nfunction createButtons() {\n    const board = document.getElementById('board');\n\n    for (let x = 0; x < 10; x++) {\n        for (let y = 0; y < 10; y++) {\n            const battleshipButtons = document.createElement('button');\n            battleshipButtons.className = 'battleship-button';\n            board.appendChild(battleshipButtons);\n            battleshipButtons.addEventListener(\"click\",function() {\n                this.innerHTML = 'Missed';\n                 \n         })\n                \n            }\n        }\n    \n\n    return board;\n}\n\n//# sourceURL=webpack://battleship2/./src/code/boardButtons.js?");
 
 /***/ }),
 

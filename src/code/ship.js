@@ -23,3 +23,4 @@ export class ship {
 }
 
 export default hit();
+
