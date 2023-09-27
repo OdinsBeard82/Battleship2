@@ -16,7 +16,7 @@
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   numbShips: () => (/* binding */ numbShips),\n/* harmony export */   ship: () => (/* binding */ ship)\n/* harmony export */ });\nfunction ship(board, row, col) {\n  const shipImg = document.createElement('img');\n  shipImg.src = '../src/images/ship.jpg';\n  shipImg.className = 'ship-square1';\n  const squareIndex = row * 10 + col; \n  board.children[squareIndex].appendChild(shipImg);\n  \n}\n\nconst numbShips = 5;\n\n\n\n//# sourceURL=webpack://battleship2/./src/code/addShip.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   numbShips: () => (/* binding */ numbShips),\n/* harmony export */   ship: () => (/* binding */ ship)\n/* harmony export */ });\nfunction ship(board, row, col) {\n  const shipImg = document.createElement('img');\n  shipImg.src = '../src/images/ship.jpg';\n  shipImg.className = 'ship-square1';\n  const squareIndex = row * 10 + col; \n  board.children[squareIndex].appendChild(shipImg);\n  \n}\n\nconst numbShips = 6;\n\n\n\n//# sourceURL=webpack://battleship2/./src/code/addShip.js?");
 
 /***/ }),
 

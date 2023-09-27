@@ -7,5 +7,5 @@ export function ship(board, row, col) {
   
 }
 
-export const numbShips = 5;
+export const numbShips = 6;
 
