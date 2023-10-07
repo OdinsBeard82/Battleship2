@@ -9,6 +9,7 @@ export function createButtons() {
             battleshipButtons.addEventListener("click",function() {
                 if (this.querySelector('img')) {
                     this.innerHTML = 'Hit';
+                    
                 } else {
                     this.innerHTML = 'Missed';
 
