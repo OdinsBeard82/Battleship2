@@ -1,4 +1,3 @@
-
 export function createButtons() {
     const board = document.getElementById('board');
 
@@ -8,7 +7,12 @@ export function createButtons() {
             battleshipButtons.className = 'battleship-button';
             board.appendChild(battleshipButtons);
             battleshipButtons.addEventListener("click",function() {
-                this.innerHTML = 'Missed';
+                if (this.querySelector('img')) {
+                    this.innerHTML = 'Hit';
+                } else {
+                    this.innerHTML = 'Missed';
+
+                }
                  
          })
                 
@@ -18,3 +22,5 @@ export function createButtons() {
 
     return board;
 }
+
+

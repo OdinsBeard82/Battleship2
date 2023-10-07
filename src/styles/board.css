@@ -26,8 +26,7 @@ body {
 }
 
 .battleship-button:hover {
-  background-color: blue;
-}
+background: #1abc9c;}
 
 .playbutton {
   position: absolute;
@@ -49,4 +48,5 @@ body {
 
 .header:hover {
   color: aqua;
+
 }

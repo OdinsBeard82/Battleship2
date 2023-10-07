@@ -24,5 +24,7 @@ for (let i = 0; i < numbShips; i++) {
     
     ship(board, row, col);
     }
+
+    
   
     newButton();
