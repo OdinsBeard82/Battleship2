@@ -16,7 +16,7 @@
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   numbShips: () => (/* binding */ numbShips),\n/* harmony export */   ship: () => (/* binding */ ship)\n/* harmony export */ });\nfunction ship(board, row, col) {\n  const shipImg = document.createElement('img');\n  shipImg.className = 'ship-square1';\n  const squareIndex = row * 10 + col; \n  board.children[squareIndex].appendChild(shipImg);\n  \n}\n\nconst numbShips = 6;\n\n\n\n//# sourceURL=webpack://battleship2/./src/code/addShip.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   numbShips: () => (/* binding */ numbShips),\n/* harmony export */   ship: () => (/* binding */ ship)\n/* harmony export */ });\nfunction ship(board, row, col) {\n  const shipImg = document.createElement('img');\n  shipImg.src = '../src/images/ship.jpg';\n  shipImg.className = 'ship-square1';\n  const squareIndex = row * 10 + col; \n  board.children[squareIndex].appendChild(shipImg);\n  \n}\n\nconst numbShips = 6;\n\n\n\n//# sourceURL=webpack://battleship2/./src/code/addShip.js?");
 
 /***/ }),
 
@@ -40,13 +40,33 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/code/computer-choice.js":
+/*!*************************************!*\
+  !*** ./src/code/computer-choice.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   computerChoice: () => (/* binding */ computerChoice),\n/* harmony export */   numbChoice: () => (/* binding */ numbChoice)\n/* harmony export */ });\nfunction newButton() {\n  const playButton = document.createElement('button');\n  playButton.className = ('playbutton');\n  playButton.innerHTML = 'play Button';\n  document.body.appendChild(playButton);\n\n  playButton.addEventListener('click', () => {\n    computerChoice(board, row, col);\n\n  });\n  }\n  newButton();\n\nfunction computerChoice(board, row, col) {\n    const shipText = document.createTextNode('X');\n    shipText.className = 'computer-choice';\n    const squareIndex = row * 10 + col; \n    board.children[squareIndex].appendChild(shipText);\n}\n  const numbChoice = 1;\n\n\n\n\n//# sourceURL=webpack://battleship2/./src/code/computer-choice.js?");
+
+/***/ }),
+
+/***/ "./src/code/playerTurn.js":
+/*!********************************!*\
+  !*** ./src/code/playerTurn.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   clickTurn: () => (/* binding */ clickTurn)\n/* harmony export */ });\nlet player1 = 'O';\nlet player2 = 'X';\nlet currentPlayer = player1;\n\n function clickTurn(square) {\n    if (typeof playBoard[square.target.id] == 'number') {\n        turn(square.target.id, currentPlayer);\n    \n        if (currentPlayer === player1) {\n            currentPlayer = player2;\n        } else {\n            currentPlayer = player1;\n        }\n    }\n\n}\n\n//# sourceURL=webpack://battleship2/./src/code/playerTurn.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _code_board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./code/board */ \"./src/code/board.js\");\n/* harmony import */ var _code_addShip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./code/addShip */ \"./src/code/addShip.js\");\n/* harmony import */ var _code_boardButtons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code/boardButtons */ \"./src/code/boardButtons.js\");\n\n\n\n\n\nfunction newButton() {\nconst playButton = document.createElement('button');\nplayButton.className = ('playbutton');\nplayButton.innerHTML = 'play Button';\ndocument.body.appendChild(playButton);\n\n}\n\nconst board = (0,_code_boardButtons__WEBPACK_IMPORTED_MODULE_2__.createButtons)();\n\n\n\nfor (let i = 0; i < _code_addShip__WEBPACK_IMPORTED_MODULE_1__.numbShips; i++) {\n    let min = 0;\n    let max = 9;\n    let row = Math.floor(Math.random()*(max-min)+min);\n    let col = Math.floor(Math.random()*(max-min)+min);\n    \n    \n    (0,_code_addShip__WEBPACK_IMPORTED_MODULE_1__.ship)(board, row, col);\n    }\n\n    \n  \n    newButton();\n\n//# sourceURL=webpack://battleship2/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _code_board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./code/board */ \"./src/code/board.js\");\n/* harmony import */ var _code_addShip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./code/addShip */ \"./src/code/addShip.js\");\n/* harmony import */ var _code_boardButtons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code/boardButtons */ \"./src/code/boardButtons.js\");\n/* harmony import */ var _code_computer_choice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./code/computer-choice */ \"./src/code/computer-choice.js\");\n/* harmony import */ var _code_playerTurn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./code/playerTurn */ \"./src/code/playerTurn.js\");\n\n\n\n\n\n\n\n\n\n\nconst board = (0,_code_boardButtons__WEBPACK_IMPORTED_MODULE_2__.createButtons)();\n\n\nfor (let i = 0; i < _code_addShip__WEBPACK_IMPORTED_MODULE_1__.numbShips; i++) {\n    let min = 0;\n    let max = 9;\n    let row = Math.floor(Math.random()*(max-min)+min);\n    let col = Math.floor(Math.random()*(max-min)+min);\n    \n    \n    (0,_code_addShip__WEBPACK_IMPORTED_MODULE_1__.ship)(board, row, col);\n    }\n\n    for (let i = 0; i < _code_computer_choice__WEBPACK_IMPORTED_MODULE_3__.numbChoice; i++) {\n        let min = 0;\n        let max = 9;\n        let row = Math.floor(Math.random()*(max-min)+min);\n        let col = Math.floor(Math.random()*(max-min)+min);\n        \n        \n        (0,_code_computer_choice__WEBPACK_IMPORTED_MODULE_3__.computerChoice)(board, row, col);\n        }\n  \n\n//# sourceURL=webpack://battleship2/./src/index.js?");
 
 /***/ })
 

@@ -1,18 +1,14 @@
 import { createBoard } from './code/board';
 import { ship, numbShips } from './code/addShip';
 import { createButtons } from './code/boardButtons';
+import { computerChoice, numbChoice } from './code/computer-choice';
+import { clickTurn } from './code/playerTurn';
 
 
-function newButton() {
-const playButton = document.createElement('button');
-playButton.className = ('playbutton');
-playButton.innerHTML = 'play Button';
-document.body.appendChild(playButton);
 
-}
+
 
 const board = createButtons();
-
 
 
 for (let i = 0; i < numbShips; i++) {
@@ -25,6 +21,13 @@ for (let i = 0; i < numbShips; i++) {
     ship(board, row, col);
     }
 
-    
+    for (let i = 0; i < numbChoice; i++) {
+        let min = 0;
+        let max = 9;
+        let row = Math.floor(Math.random()*(max-min)+min);
+        let col = Math.floor(Math.random()*(max-min)+min);
+        
+        
+        computerChoice(board, row, col);
+        }
   
-    newButton();
