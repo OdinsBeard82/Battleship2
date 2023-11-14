@@ -6,6 +6,17 @@ body {
   width: 500px;
   height: 500px;
   margin: 0 auto;
+  float: left;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  background-color: #1abc9c;
+}
+
+.board2 {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  float: right;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   background-color: #1abc9c;

@@ -9,6 +9,7 @@ import { clickTurn } from './code/playerTurn';
 
 
 const board = createButtons();
+const board2 = createBoard('board2'); 
 
 
 for (let i = 0; i < numbShips; i++) {
