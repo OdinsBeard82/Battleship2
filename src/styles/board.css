@@ -1,63 +1,48 @@
 body {
-  background-color: #1abc9c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.board {
-  width: 500px;
-  height: 500px;
-  margin: 0 auto;
-  float: left;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  background-color: #1abc9c;
-}
-
-.board2 {
-  width: 500px;
-  height: 500px;
-  margin: 0 auto;
-  float: right;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  background-color: #1abc9c;
-}
-
-
-.battleship-button {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #999;
-  border-radius: 10px;
-  border-color: blue;
-  border-width: 2px;
+.App {
   text-align: center;
-  text-decoration: #e60909;
-  display: inline-block;
-  font-size: 12px;
-}
-
-.battleship-button:hover {
-background: #1abc9c;}
-
-.playbutton {
-  position: absolute;
-  bottom: center;
- 
-}
-
-.playbutton:hover {
-  background-color: red;
 }
 
 .header {
-  padding: 1px;
-  text-align: center;
-  background: #1abc9c;
+  padding: 20px;
+  background-color: #333;
   color: white;
-  font-size: 30px;
 }
 
-.header:hover {
-  color: aqua;
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 2px;
+  margin: 0 auto; 
+}
+
+.board button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
+  background-color: #eee;
+  display: flex;
+}
+
+.board button.ship {
+  background: rgba(255, 255, 255, 0.5) url('../images/ship.png') center center no-repeat;
+  background-size: cover;
+}
+
+.board button.miss {
+  background-color: #ffffff; /* Change the color as desired */
+}
+
+.board button.hit {
+  background: rgba(255, 255, 255, 0.5) url('../images/explosion.jpg') center center no-repeat;
 
 }
+

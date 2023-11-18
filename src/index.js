@@ -1,34 +1,10 @@
-import { createBoard } from './code/board';
-import { ship, numbShips } from './code/addShip';
-import { createButtons } from './code/boardButtons';
-import { computerChoice, numbChoice } from './code/computer-choice';
-import { clickTurn } from './code/playerTurn';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
 
-
-
-
-
-const board = createButtons();
-const board2 = createBoard('board2'); 
-
-
-for (let i = 0; i < numbShips; i++) {
-    let min = 0;
-    let max = 9;
-    let row = Math.floor(Math.random()*(max-min)+min);
-    let col = Math.floor(Math.random()*(max-min)+min);
-    
-    
-    ship(board, row, col);
-    }
-
-    for (let i = 0; i < numbChoice; i++) {
-        let min = 0;
-        let max = 9;
-        let row = Math.floor(Math.random()*(max-min)+min);
-        let col = Math.floor(Math.random()*(max-min)+min);
-        
-        
-        computerChoice(board, row, col);
-        }
-  
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
